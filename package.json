@@ -1,0 +1,10 @@
+{
+  "name": "DaltonLabsOnline",
+  "description": "Online scheduling for Dalton labs.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "4.x",
+    "jade": "^1.9.2",
+    "mongodb": "~2.0"
+  }
+}
