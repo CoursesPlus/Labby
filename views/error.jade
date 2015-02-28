@@ -1,6 +1,10 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+	h1 Something went wrong!
+	h2
+		span= error.status
+		span  - 
+		span= message
+	h3 You could try again, or, if that doesn't work, go back to the homepage.
+	pre #{error.stack}
