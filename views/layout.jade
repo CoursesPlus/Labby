@@ -17,6 +17,11 @@ html(lang="en")
 				padding-top: 50px;
 				padding-bottom: 20px;
 			}
+
+		script.
+			$(document).ready(function() {
+				$('[data-toggle="tooltip"]').tooltip();
+			});
 	body
 		nav(class="navbar navbar-inverse navbar-fixed-top")
 			div(class="container")
@@ -40,7 +45,7 @@ html(lang="en")
 								input(type="text", placeholder="Dalton ID", class="form-control")
 							div(class="form-group")
 								input(type="password", placeholder="Password", class="form-control")
-							button(type="submit", class="btn btn-success") Sign in
+							button(type="submit", class="btn btn-success", data-toggle="tooltip", data-placement="bottom", title="We don't store your password. We just use it to make sure you're you.") Sign in
 						//	li(class="dropdown")
 							a(href="#", class="dropdown-toggle", data-toggle="dropdown", role="button", aria-expanded="false")
 								span Not logged in
