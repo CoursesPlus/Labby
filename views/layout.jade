@@ -1,20 +1,32 @@
 doctype html
-html
+html(lang="en")
 	head
 		title #{title} | Labby
 		link(rel='stylesheet', href='/css/bootstrap.min.css')
 		script(src="/js/jquery.js")
 		script(src="/js/bootstrap.min.js")
+
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(http-equiv="viewport", content="width=device-width, initial-scale=1")
+		meta(http-equiv="description", content="Labby is an online website for the Dalton School that lets you manage and schedule your labs.")
+		meta(http-equiv="author", content="")
+
+		style.
+			/* Move down content because we have a fixed navbar that is 50px tall */
+			body {
+				padding-top: 50px;
+				padding-bottom: 20px;
+			}
 	body
-		nav(class="navbar navbar-default")
-			div(class="container-fluid")
+		nav(class="navbar navbar-inverse navbar-fixed-top")
+			div(class="container")
 				div(class="navbar-header")
 					button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navcollapse")
 						span(class="sr-only") Toggle navigation
 						span(class="icon-bar")
 						span(class="icon-bar")
 						span(class="icon-bar")
-					a(class="navbar-brand", href="/") Dalton Labs Online
+					a(class="navbar-brand", href="/") Labby
 
 				div(class="collapse navbar-collapse", id="navcollapse")
 					ul(class="nav navbar-nav")
@@ -23,7 +35,13 @@ html
 						li
 							a(href="#") Link
 					ul(class="nav navbar-nav navbar-right")
-						li(class="dropdown")
+						form(class="navbar-form navbar-right")
+							div(class="form-group")
+								input(type="text", placeholder="Dalton ID", class="form-control")
+							div(class="form-group")
+								input(type="password", placeholder="Password", class="form-control")
+							button(type="submit", class="btn btn-success") Sign in
+						//	li(class="dropdown")
 							a(href="#", class="dropdown-toggle", data-toggle="dropdown", role="button", aria-expanded="false")
 								span Not logged in
 								span(class="caret")
@@ -37,5 +55,8 @@ html
 								li(class="divider")
 								li
 									a(href="/login") Log in
-		div(class="container")
+		div(class="container-fluid")
 			block content
+			footer
+				hr
+				p We don't see your Dalton password. We just use it to make sure you're you.
