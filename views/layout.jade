@@ -11,25 +11,11 @@ html(lang="en")
 		meta(http-equiv="description", content="Labby is an online website for the Dalton School that lets you manage and schedule your labs.")
 		meta(http-equiv="author", content="")
 
-		style.
-			/* Move down content because we have a fixed navbar that is 50px tall */
-			body {
-				padding-top: 50px;
-				padding-bottom: 20px;
-			}
-			.navbar-inverse {
-				border-color: #000000;
-			}
-			.form-control {
-				opacity: .5;
-				background-color: #303062;
-				color: #FFF;
-			}
+		link(rel="stylesheet", href="css/layout.css")
+		block styles
 
-		script.
-			$(document).ready(function() {
-				$('[data-toggle="tooltip"]').tooltip();
-			});
+		script(src="js/layout.js", type="text/javascript")
+		block scripts
 
 	body
 		nav(class="navbar navbar-inverse navbar-fixed-top")
