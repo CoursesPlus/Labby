@@ -15,7 +15,9 @@ router.get('/login', function(req, res, next) {
 			case "invalid":
 				loptions.error = "The username or password is incorrect! Make sure you've typed everything in correctly.";
 				break;
-
+			case "empty":
+				loptions.error = "You have to type in both your Dalton ID and password.";
+				break;
 			default:
 				loptions.error = "Unknown error.";
 				break;
@@ -24,6 +26,11 @@ router.get('/login', function(req, res, next) {
 	res.render('login', loptions);
 });
 router.post('/login', function(req, res, next) {
+	if (req.body.username == undefined || req.body.password == undefined ||
+		req.body.username == "" || req.body.password == "") {
+			res.redirect('/login?error=empty');
+			next();		
+	}
 	var path = "/zbuttenwieser/validation/index.jsp?username=" + req.body.username + "&password=" + req.body.password;
 	require("http").get({
 		host: 'compsci.dalton.org',
