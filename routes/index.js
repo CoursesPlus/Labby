@@ -12,7 +12,7 @@ router.get('/login', function(req, res, next) {
 	var loptions = { title: 'Log in' };
 	if (req.query.error != undefined) {
 		switch (req.query.error) {
-			case "login":
+			case "invalid":
 				loptions.error = "The username or password is incorrect! Make sure you've typed everything in correctly.";
 				break;
 
