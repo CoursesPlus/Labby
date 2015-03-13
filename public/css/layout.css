@@ -11,3 +11,6 @@ body {
 	background-color: #303062;
 	color: #FFF;
 }
+.navbar-form .form-control {
+	margin-right: 5px;
+}
