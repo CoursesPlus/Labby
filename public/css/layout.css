@@ -6,9 +6,6 @@ body {
 .navbar-inverse {
 	border-color: #000000;
 }
-.navbar-form .form-control  {
-	opacity: .5;
-	background-color: #303062;
-	color: #FFF;
+.navbar-form .form-control {
 	margin-right: 5px;
 }
