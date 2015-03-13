@@ -15,7 +15,7 @@ router.get('/login', function(req, res, next) {
 			case "login":
 				loptions.error = "The username or password is incorrect! Make sure you've typed everything in correctly.";
 				break;
-				
+
 			default:
 				loptions.error = "Unknown error.";
 				break;
@@ -25,7 +25,7 @@ router.get('/login', function(req, res, next) {
 });
 router.post('/login', function(req, res, next) {
 	var path = "/zbuttenwieser/validation/index.jsp?username=" + req.body.username + "&password=" + req.body.password;
-	http.get({
+	require("http").get({
 		host: 'compsci.dalton.org',
 		port: 8080,
 		path: path
