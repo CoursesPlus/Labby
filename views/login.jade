@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	h1 Log in
+	form(action="/login", method="POST")
+		input(type="text", placeholder="Dalton ID", name="username", class="form-control")
+		input(type="password", placeholder="Password", name="password", class="form-control")
+		input(type="submit", class="btn btn-primary btn-lg", value="Log in")
