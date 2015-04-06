@@ -17,3 +17,11 @@ body {
 .navbar-form .form-control {
 	margin-right: 5px;
 }
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #BAAEF9;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #BAAEF9;
+}
