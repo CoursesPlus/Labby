@@ -4,24 +4,9 @@ body {
 	padding-bottom: 20px;
 }
 .navbar-inverse {
-	background-image: url("http://cdn.morguefile.com/imageData/public/files/f/FidlerJan/01/l/1422547014u2ts4.jpg");
-	background-size: 100%;
 	border-color: #000000;
-}
-.form-control {
-  	opacity: .5;
-	background-color: #303062;
-	color: #FFF;
 }
 
 .navbar-form .form-control {
 	margin-right: 5px;
-}
-
-.navbar-inverse .navbar-nav>li>a {
-	color: #BAAEF9;
-}
-
-.navbar-inverse .navbar-brand {
-	color: #BAAEF9;
 }
